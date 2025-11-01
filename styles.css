@@ -19,13 +19,13 @@ body {
     "Helvetica Neue", Arial;
   color: #fffdf6;
 
-  /* Deep ocean gradient */
+
   background: linear-gradient(
     180deg,
-    #389296 0%,     /* deep navy at top */
-    #2b7478 35%,    /* dark teal-blue mid */
-    #105659 70%,    /* ocean blue */
-    #0d3e3e 100%    /* turquoise highlight near bottom */
+    #389296 0%,     
+    #2b7478 35%,  
+    #105659 70%,  
+    #0d3e3e 100%    
   );
   background-attachment: fixed;
 }
@@ -84,7 +84,7 @@ nav ul {
   text-decoration: none;
 }
 
-/* Main solid button */
+
 .btn-primary {
   background-color: #fffdf6;
   text-decoration: none;
@@ -119,10 +119,9 @@ nav ul {
     margin-top: 80px;
 }
 
-/* ADDED: ensure hero's visible children paint above the waves */
 .hero > *:not(.wavy-lines) {
-  position: relative; /* ADDED */
-  z-index: 3;         /* ADDED: higher than .wavy-lines */
+  position: relative; 
+  z-index: 3;        
 }
 
 .hero h1 {
@@ -148,7 +147,7 @@ nav ul {
    z-index: 10;
 }
 
-/* ---------- MODAL ---------- */
+
 #overlay {
   position: fixed;
   inset: 0;
@@ -183,7 +182,7 @@ nav ul {
   transform: scale(1);
 }
 
-/* ⚓ Scaled-up modal (about 70% of original) */
+
 .modal-card {
   width: 65vw;
   max-width: 800px;
@@ -311,7 +310,7 @@ background: transparent;
   display: block;
 }
 
-/* ---------- Responsive ---------- */
+
 @media (max-width: 860px) {
   .modal-card {
     grid-template-columns: 1fr;
@@ -338,7 +337,7 @@ background: transparent;
   height: 100vh;
   pointer-events: none;
   z-index: 0;
-  transform: translateY(300px); /* adjust amount: 40px–120px depending on taste */
+  transform: translateY(300px); 
 }
 
 
@@ -352,41 +351,41 @@ background: transparent;
   animation: drawWave 3s ease-out forwards
 }
 
-/* Individual colors & timing */
+
 .wave-1 {
-  stroke: rgba(13, 148, 148, 0.217);     /* cream */
+  stroke: rgba(13, 148, 148, 0.217);    
   animation-delay: 0s;
   z-index: 0;
 }
 
 .wave-2 {
-  stroke: rgba(13, 148, 148, 0.217);      /* pale blue */
+  stroke: rgba(13, 148, 148, 0.217);   
   animation-delay: 0.4s; 
     z-index: 0;
 }
 
 .wave-3 {
-  stroke: rgba(13, 148, 148, 0.217);      /* turquoise */
+  stroke: rgba(13, 148, 148, 0.217);  
   animation-delay: 0.8s;
     z-index: 0;
 }
 
-/* draw from left to right */
+
 @keyframes drawWave {
   from { stroke-dashoffset: 1600; }
   to { stroke-dashoffset: 0; }
 }
 
 
-/* ADDED (redundant-safe): ensure the key hero elements and buttons are above waves */
+
 .hero h1,
 .hero p,
 .hero .hero-buttons,
 .hero .btn,
 .btn-primary,
 .btn-ghost {
-  position: relative; /* ADDED */
-  z-index: 4;         /* ADDED - highest priority in hero area */
+  position: relative; 
+  z-index: 4;        
 }
 
 .wavy-lines,
