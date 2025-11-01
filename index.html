@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    <!-- ---------------- HEADER / NAV ---------------- -->
     <header>
       <nav>
         <ul>
@@ -30,21 +29,32 @@
         </ul>
       </nav>
     </header>
-
-    <!-- ---------------- HERO ---------------- -->
     <main>
+        
       <section class="hero">
+
+        <!-- moved the waves to be the FIRST child of .hero so they paint behind -->
+        <svg class="wavy-lines" viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="wave-1" d="M0,90  C150,40 300,140 450,90  C600,40 750,140 900,90  C1050,40 1200,140 1350,90" />
+          <path class="wave-2" d="M0,115 C150,65 300,165 450,115 C600,65 750,165 900,115 C1050,65 1200,165 1350,115" />
+          <path class="wave-3" d="M0,140 C150,90 300,190 450,140 C600,90 750,190 900,140 C1050,90 1200,190 1350,140" />
+        </svg>
+
         <h1>DRIFT & TIDE</h1>
         <p>
           Inspired by driftwood, salt air, and the pull of the tide. Drift &
           Tide creates durable coastal apparel for those who find calm in
           motion.
         </p>
-        <button class="btn" data-modal-target="#modal">Get 30% Off</button>
-      </section>
-    </main>
+        
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Shop Collection</a>
+          <button class="btn btn-ghost" data-modal-target="#modal">Get 30% Off</button>
+        </div>
 
-    <!-- ---------------- MODAL ---------------- -->
+      </section>
+
+    </main>
     <div
       class="modal"
       id="modal"
@@ -55,7 +65,6 @@
       <button class="modal-close" aria-label="Close modal" data-close-button>
         &times;
       </button>
-
       <div class="modal-card">
         <div class="modal-left">
           <img src="./images/dress.png" alt="dress" />
@@ -68,14 +77,11 @@
               <div id="modal-title" class="modal-small-title">TODAY ONLY</div>
               <span class="deco-line"></span>
             </div>
-
             <h2 class="modal-hero">SAVE <span>30%</span></h2>
-
             <p class="modal-copy">
               ON ALL COASTAL SETS<br />
               WITH CODE <strong>COASTAL30</strong>
             </p>
-
             <div class="modal-actions">
               <a class="modal-cta" href="#">Shop the Sale</a>
             </div>
@@ -83,8 +89,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ---------------- OVERLAY ---------------- -->
     <div id="overlay"></div>
   </body>
 </html>
